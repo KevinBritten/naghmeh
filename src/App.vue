@@ -22,11 +22,13 @@ export default {
 :root {
   --main-bg-color: 226, 196, 194;
 }
-.app {
+#app {
   min-height: 100vh;
+  max-height: 100vh;
   min-width: 100vw;
-}
-h1 {
-  font-size: 10px;
+  background-image: url("../src/assets/placeholder/mobile-placeholder.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 </style>

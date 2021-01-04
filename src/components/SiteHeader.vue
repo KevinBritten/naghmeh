@@ -1,5 +1,5 @@
 <template>
-  <div class="main"><h1>esfefe</h1></div>
+  <div class="main wrapper"></div>
 </template>
 
 <script>
@@ -8,8 +8,8 @@ export default {};
 
 <style scoped>
 .main {
-  /* background-color: rgba(var(--main-bg-color), 0.8); */
-  min-height: 100px;
+  background-color: rgba(var(--main-bg-color), 0.3);
+  height: 100px;
   min-width: 100vw;
 }
 </style>

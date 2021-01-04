@@ -1,5 +1,5 @@
 <template>
-  <div class="main"></div>
+  <div class="main wrapper"><p>Subscribe to the mailing list</p></div>
 </template>
 
 <script>
@@ -8,9 +8,8 @@ export default {};
 
 <style scoped>
 .main {
-  background-color: rgba(var(--main-bg-color), 0.8);
-  min-height: 250px;
-  position: absolute;
+  background-color: rgba(var(--main-bg-color), 0.3);
+  position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
