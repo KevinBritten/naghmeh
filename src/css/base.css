@@ -3,10 +3,12 @@
     color: rgb(216, 192, 188);
     letter-spacing: 2px;
     box-sizing: border-box;
+    margin: 0;
+    padding: 0
 }
 
 p {
-    font-size: 16px
+    font-size: 20px
 }
 
 .wrapper {

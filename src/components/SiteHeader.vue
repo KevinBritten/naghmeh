@@ -8,7 +8,7 @@ export default {};
 
 <style scoped>
 .main {
-  background-color: rgba(var(--main-bg-color), 0.3);
+  background-color: rgba(var(--main-bg-color), 0.4);
   height: 100px;
   min-width: 100vw;
 }
