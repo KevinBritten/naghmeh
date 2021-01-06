@@ -1,12 +1,11 @@
 var path = require("path");
 var webpack = require("webpack");
-var HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: "./src/main.js",
   output: {
-    path: path.resolve(__dirname, "./dist"),
-    publicPath: "/dist/",
+    path: path.resolve(__dirname, "./build"),
+    publicPath: "/build/",
     filename: "build.js"
   },
 
@@ -57,7 +56,7 @@ module.exports = {
   },
   resolve: {
     alias: {
-      vue$: "vue/dist/vue.esm.js"
+      vue$: "vue/build/vue.esm.js"
     },
     extensions: ["*", ".js", ".vue", ".json"]
   },
