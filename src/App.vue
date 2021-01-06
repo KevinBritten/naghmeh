@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <site-header></site-header>
+    <site-header @toggle-menu="toggleMenu"></site-header>
+    <mobile-menu v-if="menuIsOpened"></mobile-menu>
     <router-view></router-view>
     <site-footer></site-footer>
   </div>
@@ -9,11 +10,23 @@
 <script>
 import SiteFooter from "./components/SiteFooter.vue";
 import SiteHeader from "./components/SiteHeader.vue";
+import MobileMenu from "./components/MobileMenu.vue";
 export default {
   name: "app",
   components: {
     SiteFooter,
-    SiteHeader
+    SiteHeader,
+    MobileMenu
+  },
+  data() {
+    return {
+      menuIsOpened: false
+    };
+  },
+  methods: {
+    toggleMenu(data) {
+      this.menuIsOpened = data.menuIsOpened;
+    }
   }
 };
 </script>
@@ -21,6 +34,8 @@ export default {
 <style>
 :root {
   --main-bg-color: 226, 196, 194;
+  --main-bg-color-faded: rgba(var(--main-bg-color), 0.4);
+  --triangle-angle: 0;
 }
 #app {
   min-height: 100vh;

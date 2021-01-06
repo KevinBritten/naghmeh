@@ -26,7 +26,7 @@ export default {};
 
 <style scoped>
 .main {
-  background-color: rgba(var(--main-bg-color), 0.4);
+  background-color: var(--main-bg-color-faded);
   position: fixed;
   bottom: 0;
   left: 0;
