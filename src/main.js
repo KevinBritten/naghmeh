@@ -4,6 +4,7 @@ import VueRouter from "vue-router";
 import { routes } from "./routes";
 import "normalize.css";
 import "../src/css/base.css";
+import html from "../index.html";
 
 Vue.use(VueRouter);
 
