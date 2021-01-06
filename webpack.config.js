@@ -8,13 +8,8 @@ module.exports = {
     publicPath: "/build/",
     filename: "build.js"
   },
-
   module: {
     rules: [
-      {
-        test: /\.html$/i,
-        loader: "html-loader"
-      },
       {
         test: /\.css$/,
         use: [
