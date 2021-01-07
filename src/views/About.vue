@@ -1,9 +1,10 @@
 <template>
-  <div>About</div>
+  <div><h1>about</h1></div>
+  </template>
+
+  <script>
+    export default {};
+  </script>
+
+  <style></style>
 </template>
-
-<script>
-export default {};
-</script>
-
-<style></style>

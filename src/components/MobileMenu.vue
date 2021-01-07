@@ -66,10 +66,10 @@ a {
   justify-content: space-around;
 }
 .content-panel__background {
-  width: 110% !px;
+  width: 110%;
   z-index: -1;
 }
-.content-panel__content--background {
+/* .content-panel__content--background {
   height: 100px;
-}
+} */
 </style>

@@ -1,9 +1,18 @@
 <template>
   <div id="app">
-   <img src="../src/assets/placeholder/mobile-placeholder.png" class="bg-img">
-    <site-header :menuIsOpened="menuIsOpened" @toggle-menu="toggleMenu"></site-header>
+    <img
+      src="../src/assets/placeholder/mobile-placeholder.png"
+      class="bg-img"
+    />
+    <site-header
+      :menuIsOpened="menuIsOpened"
+      @toggle-menu="toggleMenu"
+    ></site-header>
     <mobile-menu :menuIsOpened="menuIsOpened"></mobile-menu>
-    <router-view></router-view>
+    <view-display :displayIsOpened="displayIsOpened && !menuIsOpened">
+      <router-view></router-view
+    ></view-display>
+
     <site-footer></site-footer>
   </div>
 </template>
@@ -12,16 +21,20 @@
 import SiteFooter from "./components/SiteFooter.vue";
 import SiteHeader from "./components/SiteHeader.vue";
 import MobileMenu from "./components/MobileMenu.vue";
+import ViewDisplay from "./components/ViewDisplay.vue";
+
 export default {
   name: "app",
   components: {
     SiteFooter,
     SiteHeader,
-    MobileMenu
+    MobileMenu,
+    ViewDisplay
   },
   data() {
     return {
-      menuIsOpened: false
+      menuIsOpened: false,
+      displayIsOpened: false
     };
   },
   methods: {
@@ -29,11 +42,12 @@ export default {
       this.menuIsOpened = !this.menuIsOpened;
     }
   },
-  watch:{
-    $route (to, from){
-        this.menuIsOpened = false;
+  watch: {
+    $route(to, from) {
+      this.menuIsOpened = false;
+      this.displayIsOpened = true;
     }
-} 
+  }
 };
 </script>
 
@@ -44,14 +58,14 @@ export default {
   --triangle-angle: 0;
 }
 .bg-img {
-  position:absolute;
-  left:0;
-  top:0;
+  position: absolute;
+  left: 0;
+  top: 0;
   height: 100%;
-  z-index:-3;
+  z-index: -3;
 }
 #app {
-  height:100vh;
+  height: 100vh;
   min-height: 100vh;
   max-height: 100vh;
   min-width: 100vw;
@@ -59,7 +73,6 @@ export default {
   background-size: auto 100%;
   background-position: center;
   background-repeat: no-repeat;
-  overflow:hidden;
-
+  overflow: hidden;
 }
 </style>

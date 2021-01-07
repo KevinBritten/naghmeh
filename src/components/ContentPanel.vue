@@ -1,12 +1,13 @@
 <template>
-  <!-- <div class="panel-container"> -->
   <div class="content-panel" :class="{ 'content-panel--bg': isBg }">
     <div class="content-panel__triangle content-panel__triangle--top"></div>
-    <div class="content-panel__content" :class="{ 'content-panel__content--bg': isBg }">
+    <div
+      class="content-panel__content"
+      :class="{ 'content-panel__content--bg': isBg }"
+    >
       <slot></slot>
     </div>
     <div class="content-panel__triangle content-panel__triangle--bottom"></div>
-    <!-- </div> -->
   </div>
 </template>
 
@@ -36,7 +37,7 @@ export default { props: ["isBg"] };
     z-index: 10;
 
     &--bg {
-      height:420px
+      height: 420px;
     }
   }
 
