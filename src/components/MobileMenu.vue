@@ -1,5 +1,7 @@
 <template>
   <div class="mobile-menu">
+        <transition name="slide">
+
     <content-panel :isBg="false">
       <div class="nav-link-container">
         <router-link v-for="navLink of navLinks" :key="navLink" :to="'/' + navLink">{{
@@ -7,9 +9,12 @@
         }}</router-link>
       </div>
     </content-panel>
+        </transition>
+        <transition name="slide">
     <content-panel :isBg="true">
       <div class="content-panel__content--background"></div>
     </content-panel>
+        </transition>
   </div>
 </template>
 
@@ -28,6 +33,15 @@ export default {
 </script>
 
 <style scoped>
+.slide-enter {
+  transform: translateX(50%);
+}
+.slide-enter-active, .slide-leave-active {
+transition: transform .5s
+}
+.slide-enter-to {
+  transform: translateX(-50%)
+}
 a {
   font-size: 30px;
   display: block;
