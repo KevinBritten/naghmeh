@@ -2,8 +2,8 @@
   <div id="app">
     <site-header @toggle-menu="toggleMenu"></site-header>
     <mobile-menu v-if="menuIsOpened"></mobile-menu>
-    <router-view></router-view>
     <site-footer></site-footer>
+    <router-view></router-view>
   </div>
 </template>
 

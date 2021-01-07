@@ -2,9 +2,9 @@
   <div class="mobile-menu">
     <content-panel :isBg="false">
       <div class="nav-link-container">
-        <a v-for="navLink of navLinks" :key="navLink" :href="'/' + navLink">{{
+        <router-link v-for="navLink of navLinks" :key="navLink" :to="'/' + navLink">{{
           navLink.toUpperCase()
-        }}</a>
+        }}</router-link>
       </div>
     </content-panel>
     <content-panel :isBg="true">

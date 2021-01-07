@@ -8,12 +8,13 @@ import "../src/css/base.css";
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-  routes,
-  mode: "history"
+
+    mode: "history",
+    routes
 });
 
 new Vue({
-  el: "#app",
-  router,
-  render: h => h(App)
+    el: "#app",
+    router,
+    render: h => h(App)
 });
