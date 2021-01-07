@@ -2,16 +2,16 @@
   <div class="mobile-menu">
         <transition name="slide">
 
-    <content-panel :isBg="false">
+    <content-panel :isBg="false" v-if="menuIsOpened">
       <div class="nav-link-container">
-        <router-link v-for="navLink of navLinks" :key="navLink" :to="'/' + navLink">{{
-          navLink.toUpperCase()
-        }}</router-link>
+        <router-link v-for="navLink of navLinks" :key="navLink" :to="'/' + navLink">
+        {{navLink.toUpperCase()}}
+        </router-link>
       </div>
     </content-panel>
         </transition>
         <transition name="slide">
-    <content-panel :isBg="true">
+    <content-panel :isBg="true" v-if="menuIsOpened">
       <div class="content-panel__content--background"></div>
     </content-panel>
         </transition>
@@ -21,6 +21,7 @@
 <script>
 import ContentPanel from "./ContentPanel.vue";
 export default {
+  props:["menuIsOpened"],
   data() {
     return {
       navLinks: ["about", "music", "merch", "video", "photo", "contact"]
@@ -34,13 +35,17 @@ export default {
 
 <style scoped>
 .slide-enter {
-  transform: translateX(50%);
+  transform: translateX(100%);
 }
 .slide-enter-active, .slide-leave-active {
-transition: transform .5s
+transition: transform .6s ease-out
 }
-.slide-enter-to {
-  transform: translateX(-50%)
+.slide-enter-to, {
+  transform: translateX(0%)
+}
+
+.slide-leave-to {
+  transform: translateX(100%);
 }
 a {
   font-size: 30px;

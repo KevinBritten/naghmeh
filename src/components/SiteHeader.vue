@@ -15,15 +15,18 @@
 <script>
 import MobileMenu from "./MobileMenu";
 export default {
-  data() {
-    return {
-      menuIsOpened: false
-    };
-  },
+  props:['menuIsOpened'],
+  // data() {
+  //   return {
+  //     menuIsOpened: false
+  //   };
+  // },
   methods: {
     toggleMenu() {
-      this.menuIsOpened = !this.menuIsOpened;
-      this.$emit("toggle-menu", { menuIsOpened: this.menuIsOpened });
+      // this.menuIsOpened = !this.menuIsOpened;
+      // this.$emit("toggle-menu", { menuIsOpened: this.menuIsOpened });
+            this.$emit("toggle-menu");
+
     }
   },
   components: {

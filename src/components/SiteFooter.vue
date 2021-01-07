@@ -27,7 +27,7 @@ export default {};
 <style scoped>
 .main {
   background-color: var(--main-bg-color-faded);
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   right: 0;

@@ -1,9 +1,10 @@
 <template>
   <div id="app">
-    <site-header @toggle-menu="toggleMenu"></site-header>
-    <mobile-menu v-if="menuIsOpened"></mobile-menu>
-    <site-footer></site-footer>
+   <img src="../src/assets/placeholder/mobile-placeholder.png" class="bg-img">
+    <site-header :menuIsOpened="menuIsOpened" @toggle-menu="toggleMenu"></site-header>
+    <mobile-menu :menuIsOpened="menuIsOpened"></mobile-menu>
     <router-view></router-view>
+    <site-footer></site-footer>
   </div>
 </template>
 
@@ -24,10 +25,15 @@ export default {
     };
   },
   methods: {
-    toggleMenu(data) {
-      this.menuIsOpened = data.menuIsOpened;
+    toggleMenu() {
+      this.menuIsOpened = !this.menuIsOpened;
     }
-  }
+  },
+  watch:{
+    $route (to, from){
+        this.menuIsOpened = false;
+    }
+} 
 };
 </script>
 
@@ -37,13 +43,23 @@ export default {
   --main-bg-color-faded: rgba(var(--main-bg-color), 0.4);
   --triangle-angle: 0;
 }
+.bg-img {
+  position:absolute;
+  left:0;
+  top:0;
+  height: 100%;
+  z-index:-3;
+}
 #app {
+  height:100vh;
   min-height: 100vh;
   max-height: 100vh;
   min-width: 100vw;
-  background-image: url("../src/assets/placeholder/mobile-placeholder.png");
-  background-size: cover;
+  /* background-image: url("../src/assets/placeholder/mobile-placeholder.png"); */
+  background-size: auto 100%;
   background-position: center;
   background-repeat: no-repeat;
+  overflow:hidden;
+
 }
 </style>

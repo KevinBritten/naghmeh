@@ -2,7 +2,7 @@
   <!-- <div class="panel-container"> -->
   <div class="content-panel" :class="{ 'content-panel--bg': isBg }">
     <div class="content-panel__triangle content-panel__triangle--top"></div>
-    <div class="content-panel__content">
+    <div class="content-panel__content" :class="{ 'content-panel__content--bg': isBg }">
       <slot></slot>
     </div>
     <div class="content-panel__triangle content-panel__triangle--bottom"></div>
@@ -32,8 +32,12 @@ export default { props: ["isBg"] };
   &__content {
     position: relative;
     background-color: rgb(var(--main-bg-color), 0.8);
-    height: 400px;
+    height: 380px;
     z-index: 10;
+
+    &--bg {
+      height:420px
+    }
   }
 
   &__triangle {
