@@ -5,7 +5,7 @@
       class="content-panel__content"
       :class="{ 'content-panel__content--bg': isBg }"
     >
-      <slot></slot>
+      <router-view v-if="!isBg"></router-view>
     </div>
     <div class="content-panel__triangle content-panel__triangle--bottom"></div>
   </div>

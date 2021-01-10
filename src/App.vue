@@ -10,8 +10,7 @@
     ></site-header>
     <mobile-menu :menuIsOpened="menuIsOpened"></mobile-menu>
     <view-display :displayIsOpened="displayIsOpened && !menuIsOpened">
-      <router-view></router-view
-    ></view-display>
+    </view-display>
 
     <site-footer></site-footer>
   </div>
