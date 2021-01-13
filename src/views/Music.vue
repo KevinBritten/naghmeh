@@ -17,6 +17,9 @@ export default {};
 </script>
 
 <style scoped>
+div {
+  padding-top: 10px;
+}
 h1 {
   color: black;
 }

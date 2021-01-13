@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>ABOUT</h1>
     <p>
       "But I must explain to you how all this mistaken idea of denouncing
       pleasure and praising pain was born and I will give you a complete account
@@ -26,8 +27,13 @@ div {
   max-height: 100%;
   overflow: scroll;
 }
-p {
+* {
   color: black;
-  margin-top: 20px;
+}
+h1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
 }
 </style>

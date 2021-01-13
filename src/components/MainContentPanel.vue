@@ -87,7 +87,7 @@ export default { props: ["isBg"] };
       rgba(var(--main-bg-color), 1) 100%
     );
     /* background-color: black; */
-    height: 10%;
+    height: 20px;
     position: absolute;
     top: 0;
     left: 0;
