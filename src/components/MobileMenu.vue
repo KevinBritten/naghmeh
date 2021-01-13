@@ -37,6 +37,11 @@ export default {
 </script>
 
 <style scoped>
+.mobile-menu {
+  height: 100%;
+  /* position: absolute; */
+  top: 0;
+}
 .slide-enter {
   transform: translateX(100%);
 }
@@ -60,9 +65,5 @@ export default {
 .content-panel__background {
   width: 110%;
   z-index: -1;
-}
-.mobile-menu {
-  height: 100%;
-  position: relative;
 }
 </style>

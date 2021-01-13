@@ -81,6 +81,7 @@ export default {
 }
 .center-content {
   flex: 1 1 0;
+  position: relative;
 }
 .main-flex-wrapper {
   display: flex;
