@@ -32,8 +32,6 @@ export default {};
 
 <style scoped>
 .main {
-  position: fixed;
-  bottom: 0;
   width: 100%;
   padding: 10px 0;
   background-color: var(--main-bg-color-faded);

@@ -22,17 +22,18 @@ export default { props: ["isBg"] };
   position: absolute;
   left: 10%;
   z-index: 2;
-  padding-top: 10px;
+  padding-top: 6%;
+  height: 100%;
   &--bg {
     z-index: 1;
-    padding-top: 0px;
+    padding-top: 2%;
     left: 0;
   }
 
   &__content {
     position: relative;
     background-color: rgb(var(--main-bg-color), 0.8);
-    height: 100%;
+    height: 80%;
     z-index: 10;
   }
 
