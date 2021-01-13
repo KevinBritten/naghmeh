@@ -1,6 +1,9 @@
 <template>
   <div class="content-panel" :class="{ 'content-panel--bg': isBg }">
-    <div class="content-panel__triangle content-panel__triangle--top"></div>
+    <div
+      class="content-panel__triangle content-panel__triangle--top"
+      :class="{ 'content-panel__triangle--bg': isBg }"
+    ></div>
     <div
       class="content-panel__content"
       :class="{ 'content-panel__content--main': !isBg }"
@@ -11,7 +14,10 @@
         <div class="scroll-overlay scroll-overlay--bottom"></div>
       </div>
     </div>
-    <div class="content-panel__triangle content-panel__triangle--bottom"></div>
+    <div
+      class="content-panel__triangle content-panel__triangle--bottom"
+      :class="{ 'content-panel__triangle--bg': isBg }"
+    ></div>
   </div>
 </template>
 
@@ -40,8 +46,8 @@ export default { props: ["isBg"] };
     height: 80%;
     z-index: 10;
     &--main {
-      padding: 0px 17% 0 10px;
-      box-sizing: content-box;
+      background-color: rgb(var(--main-bg-color), 1);
+      padding: 10px 15px 10px 15px;
     }
   }
   &__inner-container {
@@ -53,7 +59,10 @@ export default { props: ["isBg"] };
     position: relative;
     width: 100%;
     height: 40px;
-    background-color: rgba(var(--main-bg-color), 0.8);
+    background-color: rgba(var(--main-bg-color), 1);
+    &--bg {
+      background-color: rgba(var(--main-bg-color), 0.8);
+    }
 
     &--top {
       clip-path: polygon(
