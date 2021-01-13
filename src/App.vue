@@ -56,21 +56,6 @@ export default {
 </script>
 
 <style>
-:root {
-  --main-bg-color: 226, 196, 194;
-  --main-bg-color-faded: rgba(var(--main-bg-color), 0.4);
-  --triangle-angle: 0;
-}
-.bg-img {
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  z-index: -3;
-}
-.center-content {
-  flex-grow: 1;
-}
 #app {
   height: 100vh;
   min-height: 100vh;
@@ -80,6 +65,22 @@ export default {
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
+}
+:root {
+  --main-bg-color: 226, 196, 194;
+  --main-bg-color-faded: rgba(var(--main-bg-color), 0.4);
+  --triangle-angle: 0;
+}
+.bg-img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -3;
+}
+.center-content {
+  flex: 1 1 0;
 }
 .main-flex-wrapper {
   display: flex;
