@@ -8,5 +8,14 @@
   <body> 
     <div id="app"></div>
     <script src="/dist/build.js"></script>
+    <script>
+      const setAppDimentions = () => {
+        console.log('s')
+      document.body.style.width = `${window.innerWidth}px`
+      document.body.style.height = `${window.innerHeight}px`
+    }
+    setAppDimentions()
+    window.addEventListener("resize", setAppDimentions)
+    </script>
   </body>
 </html>

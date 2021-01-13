@@ -57,10 +57,10 @@ export default {
 
 <style>
 #app {
-  height: 100vh;
-  min-height: 100vh;
-  max-height: 100vh;
-  min-width: 100vw;
+  height: 100%;
+  min-height: 100%;
+  max-height: 100%;
+  min-width: 100%;
   background-size: auto 100%;
   background-position: center;
   background-repeat: no-repeat;
