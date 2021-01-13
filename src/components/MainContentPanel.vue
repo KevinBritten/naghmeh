@@ -3,9 +3,13 @@
     <div class="content-panel__triangle content-panel__triangle--top"></div>
     <div
       class="content-panel__content"
-      :class="{ 'content-panel__content--bg': isBg }"
+      :class="{ 'content-panel__content--main': !isBg }"
     >
-      <router-view v-if="!isBg"></router-view>
+      <div class="content-panel__inner-container" v-if="!isBg">
+        <div class="scroll-overlay"></div>
+        <router-view></router-view>
+        <div class="scroll-overlay scroll-overlay--bottom"></div>
+      </div>
     </div>
     <div class="content-panel__triangle content-panel__triangle--bottom"></div>
   </div>
@@ -35,8 +39,16 @@ export default { props: ["isBg"] };
     background-color: rgb(var(--main-bg-color), 0.8);
     height: 80%;
     z-index: 10;
+    &--main {
+      padding: 0px 17% 0 10px;
+      box-sizing: content-box;
+    }
   }
-
+  &__inner-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
   &__triangle {
     position: relative;
     width: 100%;
@@ -57,6 +69,29 @@ export default { props: ["isBg"] };
         0 calc((100 - var(--triangle-angle)) * 1%),
         0% 0%
       );
+    }
+  }
+  .scroll-overlay {
+    background: linear-gradient(
+      0deg,
+      rgba(var(--main-bg-color), 0) 0%,
+      rgba(var(--main-bg-color), 1) 100%
+    );
+    /* background-color: black; */
+    height: 10%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    &--bottom {
+      background: linear-gradient(
+        0deg,
+        rgba(var(--main-bg-color), 1) 0%,
+        rgba(var(--main-bg-color), 0) 100%
+      );
+      top: auto;
+      bottom: 0;
+      height: 20%;
     }
   }
 }
