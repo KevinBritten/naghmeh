@@ -51,14 +51,6 @@ export default {
 .slide-leave-to {
   transform: translateX(100%);
 }
-a {
-  font-size: 30px;
-  display: block;
-  color: black;
-  width: 100%;
-  text-align: center;
-  text-decoration: none;
-}
 .nav-link-container {
   height: 100%;
   display: flex;
@@ -69,7 +61,8 @@ a {
   width: 110%;
   z-index: -1;
 }
-/* .content-panel__content--background {
-  height: 100px;
-} */
+.mobile-menu {
+  height: 100%;
+  position: relative;
+}
 </style>

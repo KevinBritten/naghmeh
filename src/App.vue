@@ -4,15 +4,20 @@
       src="../src/assets/placeholder/mobile-placeholder.png"
       class="bg-img"
     />
-    <site-header
-      :menuIsOpened="menuIsOpened"
-      @toggle-menu="toggleMenu"
-    ></site-header>
-    <mobile-menu :menuIsOpened="menuIsOpened"></mobile-menu>
-    <view-display :displayIsOpened="displayIsOpened && !menuIsOpened">
-    </view-display>
+    <div class="main-flex-wrapper">
+      <site-header
+        class="site-header"
+        :menuIsOpened="menuIsOpened"
+        @toggle-menu="toggleMenu"
+      ></site-header>
+      <div class="center-content">
+        <mobile-menu :menuIsOpened="menuIsOpened"></mobile-menu>
+        <view-display :displayIsOpened="displayIsOpened && !menuIsOpened">
+        </view-display>
+      </div>
 
-    <site-footer></site-footer>
+      <site-footer></site-footer>
+    </div>
   </div>
 </template>
 
@@ -63,15 +68,23 @@ export default {
   height: 100%;
   z-index: -3;
 }
+.center-content {
+  flex-grow: 1;
+}
 #app {
   height: 100vh;
   min-height: 100vh;
   max-height: 100vh;
   min-width: 100vw;
-  /* background-image: url("../src/assets/placeholder/mobile-placeholder.png"); */
   background-size: auto 100%;
   background-position: center;
   background-repeat: no-repeat;
   overflow: hidden;
+}
+.main-flex-wrapper {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
 }
 </style>

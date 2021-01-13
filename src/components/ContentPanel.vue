@@ -16,35 +16,44 @@ export default { props: ["isBg"] };
 </script>
 
 <style scoped>
+a {
+  font-size: 20px;
+  display: block;
+  color: black;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+}
 .content-panel {
   /* refactor with sass */
   width: 50%;
   position: absolute;
   right: 0%;
   z-index: 2;
-  padding-top: 20px;
-
+  height: 100%;
+  top: 15px;
   &--bg {
     width: 55%;
     z-index: 1;
-    padding-top: 0px;
+    top: 5px; /* transform: scale(1.1, 1.1);
+    transform-origin: top center; */
   }
 
   &__content {
     position: relative;
     background-color: rgb(var(--main-bg-color), 0.8);
-    height: 380px;
+    height: 70%;
     z-index: 10;
 
     &--bg {
-      height: 420px;
+      padding-bottom: 20px;
+      box-sizing: content-box;
     }
   }
 
   &__triangle {
     position: relative;
     width: 100%;
-    min-height: 20px;
     height: 40px;
     background-color: rgba(var(--main-bg-color), 0.8);
 

@@ -3,7 +3,6 @@
     <slot></slot>
     <transition name="slide">
       <main-content-panel :isBg="false" v-if="displayIsOpened">
-        <slot></slot>
       </main-content-panel>
     </transition>
     <transition name="slide">
@@ -44,7 +43,7 @@ export default {
   width: 110%;
   z-index: -1;
 }
-/* .content-panel__content--background {
-  height: 100px;
-} */
+.view-display {
+  height: 100%;
+}
 </style>
