@@ -45,7 +45,7 @@ export default { props: ["isBg"] };
     z-index: 10;
     &--main {
       background-color: rgb(var(--main-bg-color), 1);
-      padding: 10px 15px 10px 15px;
+      padding: 0px 15px 10px 15px;
     }
   }
   &__inner-container {

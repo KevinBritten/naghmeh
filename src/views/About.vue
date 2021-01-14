@@ -37,12 +37,12 @@ export default {
   color: black;
 }
 h1 {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   width: 100%;
   text-align: center;
 }
 p {
-  padding-top: 10px;
+  padding: 10px 0 30px 0;
 }
 .about-page {
   height: 100%;
