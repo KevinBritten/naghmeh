@@ -9,9 +9,7 @@
       :class="{ 'content-panel__content--main': !isBg }"
     >
       <div class="content-panel__inner-container" v-if="!isBg">
-        <div class="scroll-overlay"></div>
         <router-view></router-view>
-        <div class="scroll-overlay scroll-overlay--bottom"></div>
       </div>
     </div>
     <div
@@ -78,29 +76,6 @@ export default { props: ["isBg"] };
         0 calc((100 - var(--triangle-angle)) * 1%),
         0% 0%
       );
-    }
-  }
-  .scroll-overlay {
-    background: linear-gradient(
-      0deg,
-      rgba(var(--main-bg-color), 0) 0%,
-      rgba(var(--main-bg-color), 1) 100%
-    );
-    /* background-color: black; */
-    height: 20px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    &--bottom {
-      background: linear-gradient(
-        0deg,
-        rgba(var(--main-bg-color), 1) 0%,
-        rgba(var(--main-bg-color), 0) 100%
-      );
-      top: auto;
-      bottom: 0;
-      height: 20%;
     }
   }
 }
