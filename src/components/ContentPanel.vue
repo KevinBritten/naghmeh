@@ -35,8 +35,7 @@ a {
   &--bg {
     width: 55%;
     z-index: 1;
-    top: 5px; /* transform: scale(1.1, 1.1);
-    transform-origin: top center; */
+    top: 5px;
   }
 
   &__content {
@@ -44,11 +43,6 @@ a {
     background-color: rgb(var(--main-bg-color), 0.8);
     height: 70%;
     z-index: 10;
-
-    &--bg {
-      padding-bottom: 20px;
-      box-sizing: content-box;
-    }
   }
 
   &__triangle {

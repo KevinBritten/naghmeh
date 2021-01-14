@@ -47,7 +47,7 @@ export default {
 }
 .slide-enter-active,
 .slide-leave-active {
-  transition: transform 0.3s ease-out;
+  transition: transform 0.4s ease-out;
 }
 .slide-enter-to {
   transform: translateX(0%);

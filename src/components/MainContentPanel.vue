@@ -30,12 +30,12 @@ export default { props: ["isBg"] };
   position: absolute;
   left: 5%;
   z-index: 2;
-  padding-top: 6%;
+  padding: 2% 0% 1% 0%;
+
   height: 100%;
   &--bg {
     z-index: 1;
-    padding-top: 2%;
-    padding-bottom: 4%;
+    padding: 0% 0% 3% 0%;
     left: 0;
   }
 
@@ -46,7 +46,7 @@ export default { props: ["isBg"] };
     z-index: 10;
     &--main {
       background-color: rgb(var(--main-bg-color), 1);
-      padding: 0px 15px 10px 15px;
+      padding: 0px 15px 0px 15px;
     }
   }
   &__inner-container {
@@ -57,7 +57,7 @@ export default { props: ["isBg"] };
   &__triangle {
     position: relative;
     width: 100%;
-    height: 9%;
+    height: 10%;
     background-color: rgba(var(--main-bg-color), 1);
     &--bg {
       background-color: rgba(var(--main-bg-color), 0.8);
