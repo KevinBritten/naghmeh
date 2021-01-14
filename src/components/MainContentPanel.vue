@@ -26,15 +26,16 @@ export default { props: ["isBg"] };
 <style scoped>
 .content-panel {
   /* refactor with sass */
-  width: 90%;
+  width: 95%;
   position: absolute;
-  left: 10%;
+  left: 5%;
   z-index: 2;
   padding-top: 6%;
   height: 100%;
   &--bg {
     z-index: 1;
     padding-top: 2%;
+    padding-bottom: 4%;
     left: 0;
   }
 
@@ -56,7 +57,7 @@ export default { props: ["isBg"] };
   &__triangle {
     position: relative;
     width: 100%;
-    height: 40px;
+    height: 9%;
     background-color: rgba(var(--main-bg-color), 1);
     &--bg {
       background-color: rgba(var(--main-bg-color), 0.8);

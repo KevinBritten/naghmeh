@@ -15,7 +15,7 @@
 <script>
 import MobileMenu from "./MobileMenu";
 export default {
-  props:['menuIsOpened'],
+  props: ["menuIsOpened"],
   // data() {
   //   return {
   //     menuIsOpened: false
@@ -25,8 +25,7 @@ export default {
     toggleMenu() {
       // this.menuIsOpened = !this.menuIsOpened;
       // this.$emit("toggle-menu", { menuIsOpened: this.menuIsOpened });
-            this.$emit("toggle-menu");
-
+      this.$emit("toggle-menu");
     }
   },
   components: {
@@ -38,7 +37,7 @@ export default {
 <style scoped>
 .main {
   background-color: var(--main-bg-color-faded);
-  height: 100px;
+  height: 80px;
   min-width: 100vw;
   display: flex;
   flex-direction: row;

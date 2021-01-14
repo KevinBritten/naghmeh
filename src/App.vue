@@ -69,7 +69,7 @@ export default {
 :root {
   --main-bg-color: 226, 196, 194;
   --main-bg-color-faded: rgba(var(--main-bg-color), 0.4);
-  --triangle-angle: 0;
+  --triangle-angle: 10;
 }
 /* .bg-img {
   position: absolute;
