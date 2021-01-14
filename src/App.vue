@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <img
+    <!-- <img
       src="../src/assets/placeholder/mobile-placeholder.png"
       class="bg-img"
-    />
+    /> -->
     <div class="main-flex-wrapper">
       <site-header
         class="site-header"
@@ -61,24 +61,25 @@ export default {
   min-height: 100%;
   max-height: 100%;
   min-width: 100%;
-  background-size: auto 100%;
-  background-position: center;
-  background-repeat: no-repeat;
   overflow: hidden;
+  background-image: url("../src/assets/placeholder/mobile-placeholder.png");
+  background-position: center;
+  background-size: cover;
 }
 :root {
   --main-bg-color: 226, 196, 194;
   --main-bg-color-faded: rgba(var(--main-bg-color), 0.4);
   --triangle-angle: 0;
 }
-.bg-img {
+/* .bg-img {
   position: absolute;
   left: 0;
   top: 0;
   min-width: 100%;
   min-height: 100%;
   z-index: -3;
-}
+  height: 150%;
+} */
 .center-content {
   flex: 1 1 0;
   position: relative;
