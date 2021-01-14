@@ -42,7 +42,7 @@ h1 {
   text-align: center;
 }
 p {
-  padding: 10px 0 60px 0;
+  padding: 10px 0 150px 0;
 }
 .about-page {
   height: 100%;
