@@ -46,6 +46,7 @@ export default {
     },
     closeMenu() {
       this.menuIsOpened = false;
+      this.displayIsOpened = true;
     }
   },
   created() {
