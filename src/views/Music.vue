@@ -1,12 +1,18 @@
 <template>
-  <div>
-    <div class="spotify-embed">
-      <iframe
+  <div class="music-page">
+    <div class="music-page__spotify-embed">
+      <!-- <iframe
         src="https://open.spotify.com/embed/artist/0vBnUPIvZVYs1EIW5DyfCb"
-        width="340"
-        height="80"
+        width=""
+        height="100%"
         frameborder="0"
         allowtransparency="true"
+        allowfullscreen 
+        allow="encrypted-media"
+      ></iframe> -->
+      <iframe
+        src="https://open.spotify.com/embed/artist/0vBnUPIvZVYs1EIW5DyfCb"
+        allowfullscreen
         allow="encrypted-media"
       ></iframe>
     </div></div
@@ -17,17 +23,25 @@ export default {};
 </script>
 
 <style scoped>
-div {
-  padding-top: 10px;
-}
 h1 {
   color: black;
 }
-iframe {
-  display: block;
-  width: 100%;
+.music-page {
+  height: 100%;
+  width: 100;
+  &__spotify-embed {
+    margin: auto;
+    position: relative;
+    height: 100%;
+    width: 100;
+  }
 }
-.spotify-embed {
-  width: 85%;
+
+iframe {
+  height: 360px;
+  width: 100%;
+  border: 0;
+  margin: auto;
+  display: bloack;
 }
 </style>

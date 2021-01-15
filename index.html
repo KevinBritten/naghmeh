@@ -9,11 +9,13 @@
     <div id="app"></div>
     <script src="/dist/build.js"></script>
     <script>
-      const setAppDimentions = () => {
+      function debounce(a,b,c){var d;return function(){var e=this,f=arguments;clearTimeout(d),d=setTimeout(function(){d=null,c||a.apply(e,f)},b),c&&!d&&a.apply(e,f)}}
+
+      const setAppDimentions = debounce(() => {
         console.log('s')
       document.body.style.width = `${window.innerWidth}px`
       document.body.style.height = `${window.innerHeight}px`
-    }
+    },150)
     setAppDimentions()
     window.addEventListener("resize", setAppDimentions)
     </script>
