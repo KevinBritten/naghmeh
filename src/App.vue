@@ -1,9 +1,5 @@
 <template>
   <div id="app">
-    <!-- <img
-      src="../src/assets/placeholder/mobile-placeholder.png"
-      class="bg-img"
-    /> -->
     <div class="main-flex-wrapper">
       <site-header
         class="site-header"
@@ -11,7 +7,10 @@
         @toggle-menu="toggleMenu"
       ></site-header>
       <div class="center-content">
-        <mobile-menu :menuIsOpened="menuIsOpened"></mobile-menu>
+        <mobile-menu
+          :menuIsOpened="menuIsOpened"
+          @close-menu="closeMenu"
+        ></mobile-menu>
         <view-display :displayIsOpened="displayIsOpened && !menuIsOpened">
         </view-display>
       </div>
@@ -44,12 +43,9 @@ export default {
   methods: {
     toggleMenu() {
       this.menuIsOpened = !this.menuIsOpened;
-    }
-  },
-  watch: {
-    $route(to, from) {
+    },
+    closeMenu() {
       this.menuIsOpened = false;
-      this.displayIsOpened = true;
     }
   },
   created() {

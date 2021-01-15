@@ -3,13 +3,15 @@
     <transition name="slide">
       <content-panel :isBg="false" v-if="menuIsOpened">
         <div class="nav-link-container">
-          <router-link
+          <span
             v-for="navLink of navLinks"
             :key="navLink"
-            :to="'/' + navLink"
+            @click="$emit('close-menu')"
           >
-            {{ navLink.toUpperCase() }}
-          </router-link>
+            <router-link :to="'/' + navLink">
+              {{ navLink.toUpperCase() }}
+            </router-link></span
+          >
         </div>
       </content-panel>
     </transition>
@@ -41,6 +43,9 @@ export default {
   height: 100%;
   /* position: absolute; */
   top: 0;
+}
+.router-link-active {
+  color: green;
 }
 .slide-enter {
   transform: translateX(100%);
