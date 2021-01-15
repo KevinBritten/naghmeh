@@ -54,12 +54,11 @@ p {
   }
   &__content {
     overflow: scroll;
-
     position: absolute;
-    top: 0;
+    top: 1px;
     left: 0;
     right: 0;
-    bottom: 0;
+    bottom: 1px;
   }
 }
 </style>

@@ -21,7 +21,7 @@ export default {
   /* background-color: black; */
   height: 20px;
   position: absolute;
-  top: 0;
+  top: -1px;
   left: 0;
   width: 100%;
   z-index: 10;
@@ -32,7 +32,7 @@ export default {
       rgba(var(--main-bg-color), 0) 100%
     );
     top: auto;
-    bottom: 0;
+    bottom: -1px;
     height: 20%;
   }
 }
