@@ -51,6 +51,9 @@ export default {
       this.menuIsOpened = false;
       this.displayIsOpened = true;
     }
+  },
+  created() {
+    this.displayIsOpened = this.$route.name !== "home";
   }
 };
 </script>
