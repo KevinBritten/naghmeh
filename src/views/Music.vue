@@ -2,15 +2,6 @@
   <div class="music-page">
     <h1>Music</h1>
     <div class="music-page__spotify-embed">
-      <!-- <iframe
-        src="https://open.spotify.com/embed/artist/0vBnUPIvZVYs1EIW5DyfCb"
-        width=""
-        height="100%"
-        frameborder="0"
-        allowtransparency="true"
-        allowfullscreen 
-        allow="encrypted-media"
-      ></iframe> -->
       <loading-animation v-if="!spotifyIsLoaded"></loading-animation>
       <iframe
         src="https://open.spotify.com/embed/artist/0vBnUPIvZVYs1EIW5DyfCb"
