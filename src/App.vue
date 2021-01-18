@@ -62,7 +62,7 @@ export default {
   max-height: 100%;
   min-width: 100%;
   overflow: hidden;
-  background-image: url("../src/assets/placeholder/mobile-placeholder.png");
+  background-image: url("../src/assets/images/homepage-background-mobile.jpg");
   background-position: center;
   background-size: cover;
 }
