@@ -5,21 +5,36 @@
       <scroll-overlay></scroll-overlay>
       <div class="about-page__content">
         <p>
-          "But I must explain to you how all this mistaken idea of denouncing
-          pleasure and praising pain was born and I will give you a complete
-          account of the system, and expound the actual teachings of the great
-          explorer of the truth, the master-builder of human happiness. No one
-          rejects, dislikes, or avoids pleasure itself, because it is pleasure,
-          but because those who do not know how to pursue pleasure rationally
-          encounter consequences that are extremely painful. Nor again is there
-          anyone who loves or pursues or desires to obtain pain of itself,
-          because it is pain, but because occasionally circumstances occur in
-          which toil and pain can procure him some great pleasure. To take a
-          trivial example, which of us ever undertakes laborious physical
-          exercise, except to obtain some advantage from it? But who has any
-          right to find fault with a man who chooses to enjoy a pleasure that
-          has no annoying consequences, or one who avoids a pain that produces
-          no resultant pleasure?"
+          Naghmeh Shafiei is an Iranian-Canadian singer/songwriter and the front
+          woman of the Montreal based post-modern rock band Naghmeh and the
+          Southern Shores. She began performing as a solo artist in 2016 while
+          living in San Francisco, deciding to abandon the corporate grind to
+          pursue her dream of becoming a touring musician. Naghmeh jumped head
+          first into the world of rock n’ roll and set off on the road over the
+          following year with performances across Europe and South America. Her
+          DIY musical empire was steadily growing as her music spread across the
+          globe.
+        </p>
+        <p>
+          After years on the road and a few international collaborations,
+          Naghmeh moved back to her hometown of Montreal to focus on the next
+          step of her career. She assembled a band, performed in every corner of
+          the city, and recorded, co-produced and released her self-titled debut
+          album in 2019. Her sound is authentic in its delivery and blends
+          different eras of music into a punky, alternative, pop rock. With
+          throaty melodies, satirical lyrics and a touch of triumphant rock n'
+          roll, Naghmeh's goal is to transform the listener’s internal turmoil
+          into a healing, whimsical dance.
+        </p>
+        <p class="last-paragraph">
+          She holds a Master of Arts in Psychology and has worked as a front
+          woman, song writer, event producer, performer, and session musician.
+          She’s a fierce entrepreneur and has worked hard her entire life to
+          rise above the prejudices she’s faced. Her story is inspiring and has
+          just begun. Naghmeh is on a mission to bring love and justice to the
+          world and is doing so through the art of music. She’s dedicating her
+          efforts to produce her next musical offering which is set to release
+          in 2021. Stay tuned for Queen Of Hearts!
         </p>
       </div>
       <scroll-overlay :is-bottom="true"></scroll-overlay>
@@ -42,6 +57,9 @@ h1 {
   text-align: center;
 }
 p {
+  padding: 10px 0 10px 0;
+}
+.last-paragraph {
   padding: 10px 0 150px 0;
 }
 .about-page {
