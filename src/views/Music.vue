@@ -1,22 +1,32 @@
 <template>
   <div class="music-page">
-    <h1>Music</h1>
-    <div class="music-page__spotify-embed">
-      <loading-animation v-if="!spotifyIsLoaded"></loading-animation>
-      <iframe
-        src="https://open.spotify.com/embed/artist/0vBnUPIvZVYs1EIW5DyfCb"
-        allowfullscreen
-        allow="encrypted-media"
-        @load="spotifyIsLoaded = true"
-      ></iframe>
-    </div></div
+    <scroll-area :title="'Music'">
+      <div class="music-page__spotify-embed">
+        <loading-animation v-if="!spotifyIsLoaded"></loading-animation>
+        <!-- <h1>Mount Shasta</h1> -->
+        <iframe
+          src="https://open.spotify.com/embed/artist/0vBnUPIvZVYs1EIW5DyfCb"
+          allowfullscreen
+          allow="encrypted-media"
+          @load="spotifyIsLoaded = true"
+        ></iframe>
+        <iframe
+          src="https://open.spotify.com/embed/track/72a5G5O8nntwovTGojP7Mo"
+          width="300"
+          height="380"
+          frameborder="0"
+          allowtransparency="true"
+          allow="encrypted-media"
+        ></iframe></div
+    ></scroll-area></div
 ></template>
 
 <script>
 import LoadingAnimation from "../components/LoadingAnimation.vue";
+import ScrollArea from "../components/ScrollArea.vue";
 
 export default {
-  components: { LoadingAnimation },
+  components: { LoadingAnimation, ScrollArea },
   data() {
     return {
       spotifyIsLoaded: false
@@ -38,10 +48,9 @@ h1 {
   overflow: hidden;
   &__spotify-embed {
     display: block;
-    margin: 5% 0;
+    margin: 10% 0;
     position: relative;
     width: 100%;
-    height: 90%;
     overflow: hidden;
   }
 }
