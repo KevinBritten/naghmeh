@@ -13,9 +13,7 @@
           ></iframe>
         </div>
         <div class="music-page__single-embed-container">
-          <!-- <loading-animation v-if="!spotifyIsLoaded[2]"></loading-animation> -->
           <loading-animation v-if="!spotifyIsLoaded[2]"></loading-animation>
-
           <iframe
             src="https://open.spotify.com/embed/track/72a5G5O8nntwovTGojP7Mo"
             width="300"
