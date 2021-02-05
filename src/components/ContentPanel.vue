@@ -1,13 +1,19 @@
 <template>
   <div class="content-panel" :class="{ 'content-panel--bg': isBg }">
-    <div class="content-panel__triangle content-panel__triangle--top"></div>
+    <div
+      class="content-panel__triangle content-panel__triangle--top"
+      :class="{ 'content-panel__triangle--bg': isBg }"
+    ></div>
     <div
       class="content-panel__content"
-      :class="{ 'content-panel__content--bg': isBg }"
+      :class="{ 'content-panel__triangle--bg': isBg }"
     >
       <slot></slot>
     </div>
-    <div class="content-panel__triangle content-panel__triangle--bottom"></div>
+    <div
+      class="content-panel__triangle content-panel__triangle--bottom"
+      :class="{ 'content-panel__triangle--bg': isBg }"
+    ></div>
   </div>
 </template>
 
@@ -28,28 +34,35 @@ a {
   /* refactor with sass */
   width: 50%;
   position: absolute;
-  right: 0%;
+  right: 5%;
   z-index: 2;
   height: 100%;
   top: 15px;
   &--bg {
-    width: 55%;
     z-index: 1;
-    top: 5px;
+    top: 30px;
+    right: 0%;
+    /* background-color: green; */
   }
 
   &__content {
     position: relative;
-    background-color: rgb(var(--main-bg-color), 0.8);
+    background-color: rgb(var(--main-bg-color), 1);
     height: 70%;
     z-index: 10;
+    &--bg {
+      background-color: rgba(var(--main-bg-color), 0.8);
+    }
   }
 
   &__triangle {
     position: relative;
     width: 100%;
     height: 40px;
-    background-color: rgba(var(--main-bg-color), 0.8);
+    background-color: rgba(var(--main-bg-color), 1);
+    &--bg {
+      background-color: rgba(var(--main-bg-color), 0.8);
+    }
 
     &--top {
       clip-path: polygon(
