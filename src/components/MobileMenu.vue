@@ -1,6 +1,6 @@
 <template>
   <div class="mobile-menu">
-    <transition name="slide">
+    <transition name="slide-main">
       <content-panel :isBg="false" v-if="menuIsOpened">
         <div class="nav-link-container">
           <span
@@ -15,7 +15,7 @@
         </div>
       </content-panel>
     </transition>
-    <transition name="slide">
+    <transition name="slide-bg">
       <content-panel :isBg="true" v-if="menuIsOpened">
         <div class="content-panel__content--background"></div>
       </content-panel>
@@ -47,20 +47,32 @@ export default {
 .router-link-active {
   color: green;
 }
-.slide-enter {
+
+.slide-main-enter {
+  transform: translateX(107%);
+}
+.slide-bg-enter {
   transform: translateX(100%);
 }
-.slide-enter-active,
-.slide-leave-active {
-  transition: transform 0.4s ease-out;
+.slide-main-enter-active,
+.slide-main-leave-active,
+.slide-bg-enter-active,
+.slide-bg-leave-active {
+  transition: transform 0.5s ease-out;
 }
-.slide-enter-to {
+
+.slide-main-enter-to,
+.slide-bg-enter-to {
   transform: translateX(0%);
 }
 
-.slide-leave-to {
+.slide-main-leave-to {
+  transform: translateX(107%);
+}
+.slide-bg-leave-to {
   transform: translateX(100%);
 }
+
 .nav-link-container {
   height: 100%;
   display: flex;
