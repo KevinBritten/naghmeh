@@ -44,7 +44,7 @@ export default {
   &__youtube-embed-container {
     margin-top: 5%;
     max-width: 100%;
-    margin-bottom: 5%;
+    margin-bottom: 30%;
   }
 }
 
