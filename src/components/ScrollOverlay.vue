@@ -33,7 +33,6 @@ export default {
     );
     top: auto;
     bottom: -1px;
-    height: 20%;
   }
 }
 </style>
