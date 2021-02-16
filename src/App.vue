@@ -58,28 +58,19 @@ export default {
 <style>
 #app {
   height: 100%;
+  background-image: url("../src/assets/images/homepage-background-mobile.jpg");
+  background-size: cover;
   /* min-height: 100%; */
   /* max-height: 100%; */
   /* min-width: 100%; */
   /* overflow: hidden; */
-  background-image: url("../src/assets/images/homepage-background-mobile.jpg");
-  background-position: center;
-  background-size: cover;
+  /* background-position: center; */
 }
 :root {
   --main-bg-color: 226, 196, 194;
   --main-bg-color-faded: rgba(var(--main-bg-color), 0.4);
   --triangle-angle: 10;
 }
-/* .bg-img {
-  position: absolute;
-  left: 0;
-  top: 0;
-  min-width: 100%;
-  min-height: 100%;
-  z-index: -3;
-  height: 150%;
-} */
 .center-content {
   flex: 1 1 0;
   position: relative;
@@ -87,7 +78,7 @@ export default {
 .main-flex-wrapper {
   display: flex;
   height: 100%;
-  width: 100%;
   flex-direction: column;
+  /* width: 100%; */
 }
 </style>

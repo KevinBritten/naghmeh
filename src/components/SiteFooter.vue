@@ -1,6 +1,6 @@
 <template>
-  <div class="main wrapper">
-    <div class="footer__social-icons">
+  <div class="site-footer">
+    <div class="site-footer__social-icons">
       <a
         href="https://music.apple.com/ca/artist/naghmeh-and-the-southern-shores/1464957868"
         ><img src="../assets/social-icons/Apple_Music_Icon_blk_sm_073120.svg"
@@ -31,23 +31,20 @@ export default {};
 </script>
 
 <style scoped>
-.main {
+.site-footer {
   width: 100%;
   padding: 10px 0;
   background-color: var(--main-bg-color-faded);
-}
-
-.footer {
   &__social-icons {
     display: flex;
     justify-content: space-around;
-    position: relative;
-    width: 100%;
-    height: 100%;
+    /* height: 100%; */
+    /* width: 100%; */
+    /* position: relative; */
     a {
       width: 10%;
-      max-height: 100%;
       margin: auto 0;
+      /* max-height: 100%; */
     }
     img {
       width: 100%;
