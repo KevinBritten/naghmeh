@@ -1,6 +1,6 @@
 <template>
   <div class="scroll-area">
-    <h1>{{ title }}</h1>
+    <h1 class="scroll-area__title">{{ title }}</h1>
     <div class="scroll-area__content-wrapper">
       <scroll-overlay></scroll-overlay>
       <div class="scroll-area__content">
@@ -20,17 +20,15 @@ export default {
 </script>
 
 <style scoped>
-h1 {
-  margin-bottom: 5px;
-  width: 100%;
-  text-align: center;
-  color: black;
-}
-
 .scroll-area {
   height: 100%;
   display: flex;
   flex-direction: column;
+  &__title {
+    margin-bottom: 5px;
+    width: 100%;
+    text-align: center;
+  }
   &__content-wrapper {
     position: relative;
     flex: 1;

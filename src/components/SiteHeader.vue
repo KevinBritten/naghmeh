@@ -41,6 +41,7 @@ export default {
     flex-direction: column;
     height: 100%;
     justify-content: center;
+    color: rgb(216, 192, 188);
   }
   &__title-right {
     align-self: flex-end;

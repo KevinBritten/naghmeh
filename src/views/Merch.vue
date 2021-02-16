@@ -38,15 +38,6 @@ export default {
 </script>
 
 <style scoped>
-a {
-  color: black;
-}
-p {
-  color: black;
-}
-h1 {
-  color: black;
-}
 .merch-page {
   height: 100%;
   width: 100%;

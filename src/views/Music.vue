@@ -43,7 +43,6 @@ export default {
 
 <style scoped>
 h1 {
-  color: black;
   text-align: center;
 }
 .music-page {

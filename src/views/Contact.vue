@@ -14,13 +14,11 @@ export default {};
 
 <style scoped>
 h1 {
-  color: black;
   width: 100%;
   text-align: center;
 }
 p {
   margin-top: 50px;
-  color: black;
   text-align: center;
 }
 </style>

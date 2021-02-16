@@ -45,7 +45,6 @@ export default {
 </script>
 <style scoped>
 * {
-  color: black;
 }
 h1 {
   margin-bottom: 5px;

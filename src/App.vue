@@ -23,8 +23,8 @@
 <script>
 import SiteFooter from "./components/SiteFooter.vue";
 import SiteHeader from "./components/SiteHeader.vue";
-import MobileMenu from "./components/MobileMenu.vue";
-import ViewDisplay from "./components/ViewDisplay.vue";
+import MobileMenu from "./components/MobileMenu/MobileMenu.vue";
+import ViewDisplay from "./components/ViewDisplay/ViewDisplay.vue";
 
 export default {
   name: "app",
