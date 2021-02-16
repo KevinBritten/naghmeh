@@ -2,8 +2,8 @@
   <!-- <div class="site-header wrapper"> -->
   <div class="site-header">
     <div class="site-header__title-container">
-      <h1 class="site-header__title-left">NAGHMEH</h1>
-      <h1 class="site-header__title-right">SHAFIEI</h1>
+      <h1 class="site-header__title">NAGHMEH</h1>
+      <h1 class="site-header__title site-header__title--right">SHAFIEI</h1>
     </div>
     <div
       class="site-header__hamburger-menu"
@@ -37,15 +37,23 @@ export default {
 
   &__title-container {
     width: 70%;
+    max-width: 210px;
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: center;
     color: rgb(216, 192, 188);
+    font-size: 30px;
   }
-  &__title-right {
-    align-self: flex-end;
-    letter-spacing: 10px;
+  &__title {
+    font-size: 50px;
+    line-height: 38px;
+    font-weight: 400;
+
+    &--right {
+      align-self: flex-end;
+      letter-spacing: 10px;
+    }
   }
   &__hamburger-menu {
     position: relative;

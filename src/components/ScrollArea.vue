@@ -1,6 +1,6 @@
 <template>
   <div class="scroll-area">
-    <h1 class="scroll-area__title">{{ title }}</h1>
+    <h1 class="scroll-area__title">• {{ title }} •</h1>
     <div class="scroll-area__content-wrapper">
       <scroll-overlay></scroll-overlay>
       <div class="scroll-area__content">

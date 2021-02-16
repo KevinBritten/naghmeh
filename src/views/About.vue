@@ -46,11 +46,7 @@ export default {
 <style scoped>
 * {
 }
-h1 {
-  margin-bottom: 5px;
-  width: 100%;
-  text-align: center;
-}
+
 p {
   padding: 15px 0 10px 0;
 }

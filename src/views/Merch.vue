@@ -1,8 +1,8 @@
 <template>
   <div class="merch-page">
     <scroll-area :title="'Merch'">
-      <div class="item-container">
-        <h1>CD</h1>
+      <div class="merch-page__item-container">
+        <h2>CD</h2>
         <img src="../assets/images/20191212_103032.jpg" />
         <p>
           $10 on
@@ -13,8 +13,8 @@
           >
         </p>
       </div>
-      <div class="item-container">
-        <h1>T-shirt</h1>
+      <div class="merch-page__item-container">
+        <h2>T-shirt</h2>
         <img src="../assets/images/20191212_110100.jpg" />
         <p>
           $15 on
@@ -41,13 +41,15 @@ export default {
 .merch-page {
   height: 100%;
   width: 100%;
-}
-.item-container {
-  margin: 10px 0 30px;
-  text-align: center;
+
+  &__item-container {
+    margin: 10px 0 30px;
+    text-align: center;
+  }
 }
 img {
   height: 150px;
   width: 100%;
+  object-fit: cover;
 }
 </style>
