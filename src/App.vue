@@ -58,10 +58,10 @@ export default {
 <style>
 #app {
   height: 100%;
-  min-height: 100%;
-  max-height: 100%;
-  min-width: 100%;
-  overflow: hidden;
+  /* min-height: 100%; */
+  /* max-height: 100%; */
+  /* min-width: 100%; */
+  /* overflow: hidden; */
   background-image: url("../src/assets/images/homepage-background-mobile.jpg");
   background-position: center;
   background-size: cover;
