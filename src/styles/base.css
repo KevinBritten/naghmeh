@@ -8,17 +8,16 @@
     padding: 0
 }
 
-p, a {
-    font-size: 18px;
 
-}
 p {
     font-size: 18px;
 }
 
 a {
 color: black;
-
+font-family: 'Amatic SC', cursive;
+font-size:34px;
+-webkit-tap-highlight-color: rgb(226, 196, 194,0.8);
 }
 
 h1 {

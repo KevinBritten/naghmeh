@@ -3,9 +3,9 @@
     <scroll-area :title="'Merch'">
       <div class="merch-page__item-container">
         <h2>CD</h2>
-        <img src="../assets/images/20191212_103032.jpg" />
+        <img src="../assets/images/merch/cd--mobile.jpg" />
         <p>
-          $10 on
+          $15 on
           <a
             href="https://naghmehandthesouthernshores.bandcamp.com/album/naghmeh-and-the-southern-shores"
             target="_blank"
@@ -14,10 +14,16 @@
         </p>
       </div>
       <div class="merch-page__item-container">
-        <h2>T-shirt</h2>
-        <img src="../assets/images/20191212_110100.jpg" />
+        <div class="merch-page__item-inner-container">
+          <h2>T-shirt</h2>
+          <img src="../assets/images/merch/t-shirt--mobile.jpg" />
+        </div>
+        <div class="merch-page__item-inner-container">
+          <h2>Tanktop</h2>
+          <img src="../assets/images/merch/tanktop--mobile.jpg" />
+        </div>
         <p>
-          $15 on
+          $20 on
           <a
             href="https://naghmehandthesouthernshores.bandcamp.com/merch/tank-top"
             target="_blank"
@@ -45,10 +51,18 @@ export default {
   &__item-container {
     margin: 10px 0 30px;
     text-align: center;
+    a {
+      color: blue;
+    }
+  }
+  &__item-inner-container {
+    display: inline-block;
+    width: 49%;
+    padding: 2px;
   }
 }
 img {
-  height: 150px;
+  height: 250px;
   width: 100%;
   object-fit: cover;
 }
