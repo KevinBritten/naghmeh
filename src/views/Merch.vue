@@ -52,7 +52,7 @@ export default {
     margin: 10px 0 30px;
     text-align: center;
     a {
-      color: blue;
+      font-family: Arial;
     }
   }
   &__item-inner-container {

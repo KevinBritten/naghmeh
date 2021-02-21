@@ -46,14 +46,13 @@ h1 {
   text-align: center;
 }
 .music-page {
-  padding: 5% 0;
   height: 100%;
   width: 100%;
   position: relative;
   overflow: hidden;
   &__spotify-embed {
     display: block;
-    margin: 10% 0;
+    margin: 5% 0;
     position: relative;
     width: 100%;
     overflow: hidden;

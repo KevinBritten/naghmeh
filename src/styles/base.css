@@ -1,7 +1,5 @@
 * {
     font-family:Arial;
-
-    /* font-family: 'Open Sans', sans-serif; */
     letter-spacing: 2px;
     box-sizing: border-box;
     margin: 0;
@@ -10,25 +8,39 @@
 
 
 p {
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 a {
 color: black;
 font-family: 'Amatic SC', cursive;
-font-size:34px;
+font-size:2.1875rem;
 -webkit-tap-highlight-color: rgb(226, 196, 194,0.8);
 }
 
 h1 {
     margin: 0;
     font-family: 'Amatic SC', cursive;
-    font-size: 35px;
-    line-height: 25px;
+    font-size: 2.7rem;
+    line-height: 2.4rem;
     font-weight: 700;
 }
 
 h2 {
-    font-size: 26px;
+    font-size: 1.625rem;
     font-weight: 500
+}
+
+@media(min-width: 500px){
+     p {
+         font-size: 1.3rem
+     }
+     a {
+        font-size: 2.5rem
+        }
+    h1 {
+        font-size: 3.5rem;
+        line-height: 2.85rem
+        }
+   
 }
