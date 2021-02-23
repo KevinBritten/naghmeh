@@ -1,5 +1,6 @@
 var path = require("path");
 var webpack = require("webpack");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = {
   entry: "./src/main.js",
@@ -41,10 +42,10 @@ module.exports = {
         exclude: /node_modules/
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
+        test: /\.(png|jpg|gif|svg|jpeg)$/,
         loader: "file-loader",
         options: {
-          name: "[name].[ext]?[hash]"
+          name: "[path]/[name].[ext]?[hash]"
         }
       }
     ]
@@ -63,7 +64,8 @@ module.exports = {
   performance: {
     hints: false
   },
-  devtool: "#eval-source-map"
+  devtool: "#eval-source-map",
+  plugins: [new CleanWebpackPlugin()]
 };
 
 if (process.env.NODE_ENV === "production") {
