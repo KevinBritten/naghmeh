@@ -31,10 +31,13 @@
         :class="{ 'photo-page__photo-container--fullscreen': fullscreen }"
       >
         <img
+          class="photo-page__image"
+          :class="{
+            'photo-page__image--fullscreen': fullscreen
+          }"
           v-for="photo in photoList"
           :src="`${sourceFolder}${photo}`"
           :key="photo"
-          class="photo-page__image"
         />
       </div>
     </scroll-area>
@@ -89,7 +92,9 @@ export default {
   &__photo-container {
     margin: 15px 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     &--fullscreen {
       margin: 0;
       position: fixed;
@@ -105,6 +110,22 @@ export default {
   &__image {
     max-width: 100%;
     margin-bottom: 10px;
+    object-fit: cover;
+    &--fullscreen {
+      width: 100%;
+    }
+  }
+}
+@media (min-width: 500px) {
+  .photo-page {
+    &__image {
+      width: 49%;
+      min-height: 100%;
+      &--fullscreen {
+        width: 100%;
+        min-height: 0;
+      }
+    }
   }
 }
 </style>
