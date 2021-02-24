@@ -4,7 +4,7 @@ import VueRouter from "vue-router";
 import { routes } from "./routes";
 import "normalize.css";
 import "../src/styles/base.css";
-require.context("./assets/images/photos", true, /.*/);
+require.context("./assets/images/", true, /.*/);
 
 Vue.use(VueRouter);
 
