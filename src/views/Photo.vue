@@ -1,11 +1,29 @@
 <template>
   <div class="photo-page">
     <div
-      class="photo-page__fullscreen-button"
-      :class="{ 'photo-page__fullscreen-button--fullscreen': fullscreen }"
+      class="photo-page__fullscreen-icon-container"
+      :class="{
+        'photo-page__fullscreen-icon-container--fullscreen': fullscreen
+      }"
       @click="fullscreen = !fullscreen"
     >
-      x
+      <svg
+        class="photo-page__fullscreen-icon"
+        id="i-fullscreen"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 32 32"
+        width="32"
+        height="32"
+        fill="none"
+        stroke="currentcolor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="1"
+      >
+        <path
+          d="M4 12 L4 4 12 4 M20 4 L28 4 28 12 M4 20 L4 28 12 28 M28 20 L28 28 20 28"
+        />
+      </svg>
     </div>
     <scroll-area :title="'Photos'">
       <div
@@ -16,6 +34,7 @@
           v-for="photo in photoList"
           :src="`${sourceFolder}${photo}`"
           :key="photo"
+          class="photo-page__image"
         />
       </div>
     </scroll-area>
@@ -42,26 +61,35 @@ export default {
 <style scoped>
 .photo-page {
   height: 100%;
-  &__fullscreen-button {
+  &__fullscreen-icon-container {
     position: absolute;
-    right: 10px;
-    top: 20px;
+    right: 2px;
+    top: 56px;
     font-size: 40px;
-    max-height: 20px;
-    max-width: 20px;
+    width: 40px;
     color: white;
-    top: -40px;
     z-index: 200;
+    transition: transform 300ms;
+    transform: scale(1);
+
+    /* &:hover {
+      transform: scale(1.5);
+    } */
     &--fullscreen {
       position: fixed;
-      bottom: 35px;
+      top: 15px;
       right: 15px;
-      top: auto;
+      transform: scale(1.5);
     }
+  }
+  &__fullscreen-icon {
+    width: 100%;
+    height: 100%;
   }
   &__photo-container {
     margin: 15px 0;
-
+    display: flex;
+    flex-direction: column;
     &--fullscreen {
       margin: 0;
       position: fixed;
@@ -74,8 +102,9 @@ export default {
       background-color: rgb(var(--main-bg-color));
     }
   }
-}
-img {
-  max-width: 100%;
+  &__image {
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
 }
 </style>
