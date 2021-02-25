@@ -37,7 +37,7 @@
             'photo-page__image--fullscreen': fullscreen
           }"
           v-for="(photo, i) in photoList"
-          :src="`${sourceFolder}${photo}`"
+          v-lazy="`${sourceFolder}${photo}`"
           :key="photo"
           :alt="i"
         />
@@ -159,6 +159,7 @@ export default {
     max-width: 100%;
     margin-bottom: 10px;
     object-fit: cover;
+    min-height: 200px;
     &--fullscreen {
       width: 100%;
     }
