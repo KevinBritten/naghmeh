@@ -5,7 +5,7 @@
       :class="{
         'photo-page__fullscreen-icon-container--fullscreen': fullscreen
       }"
-      @click="fullscreen = !fullscreen"
+      @click="fullscreenToggle()"
     >
       <svg
         class="photo-page__fullscreen-icon"
@@ -28,6 +28,7 @@
     <scroll-area :title="'Photos'">
       <div
         class="photo-page__photo-container"
+        ref="photoContainer"
         :class="{ 'photo-page__photo-container--fullscreen': fullscreen }"
       >
         <img
@@ -35,9 +36,10 @@
           :class="{
             'photo-page__image--fullscreen': fullscreen
           }"
-          v-for="photo in photoList"
+          v-for="(photo, i) in photoList"
           :src="`${sourceFolder}${photo}`"
           :key="photo"
+          :alt="i"
         />
       </div>
     </scroll-area>
@@ -57,6 +59,52 @@ export default {
   },
   components: {
     ScrollArea
+  },
+  methods: {
+    fullscreenToggle() {
+      const fullscreen = this.fullscreen;
+      const photoContainer = this.$refs.photoContainer;
+      const currentContainer = fullscreen
+        ? photoContainer
+        : photoContainer.parentNode;
+      const targetContainer = fullscreen
+        ? photoContainer.parentNode
+        : photoContainer;
+      const scrollSectionStart = currentContainer.getBoundingClientRect().y;
+      // const firstVisibleImage = Array.from(photoContainer.children).find(
+      //   child => {
+      //     const childBoundingRect = child.getBoundingClientRect();
+      //     return (
+      //       childBoundingRect.y + childBoundingRect.height > scrollSectionStart
+      //     );
+      //   }
+      // );
+      const firstVisibleImage = Array.from(photoContainer.children).find(
+        child => {
+          return child.getBoundingClientRect().y > scrollSectionStart;
+        }
+      );
+      console.log(firstVisibleImage);
+      this.fullscreen = !fullscreen;
+      const waitForClass = setInterval(() => {
+        const classChanged = this.fullscreen
+          ? photoContainer.classList.contains(
+              "photo-page__photo-container--fullscreen"
+            )
+          : !photoContainer.classList.contains(
+              "photo-page__photo-container--fullscreen"
+            );
+
+        if (classChanged) {
+          targetContainer.scrollTop =
+            firstVisibleImage.getBoundingClientRect().y - scrollSectionStart;
+          clearInterval(waitForClass);
+        }
+      }, 50);
+      setTimeout(() => {
+        clearInterval(waitForClass);
+      }, 300);
+    }
   }
 };
 </script>
@@ -95,6 +143,7 @@ export default {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    overflow: scroll;
     &--fullscreen {
       margin: 0;
       position: fixed;
@@ -102,7 +151,6 @@ export default {
       right: 0;
       bottom: 0;
       left: 0;
-      overflow: scroll;
       z-index: 100;
       background-color: rgb(var(--main-bg-color));
     }
